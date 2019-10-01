@@ -18,7 +18,7 @@ function draw() {
     let win = checkWin(ball, block);
     if(win) {restart(ball, block); pontos++}
     if(ball.y >= 500) {restart(ball, block); erros++}
-    if(erros >= 5) {erros = 0; pontos = 0}
+    if(erros >= 3) {erros = 0; pontos = 0}
 }
 function captureKeyboard() {
     if(keyIsDown(LEFT_ARROW)) move(37);
