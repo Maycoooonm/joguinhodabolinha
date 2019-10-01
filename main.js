@@ -33,15 +33,14 @@ function checkWin(ball, block) {
     let BallY = ball.y;
     let BlockX = block.x;
     let BlockY = block.y;
-    if(BallY > BlockY) {
-        if(BallX > BlockX && BallX < (BlockX+113)) return true;
-    } 
+    if(BallY > BlockY && BallX > BlockX && BallX < (BlockX+113)) return true;
     return false;
 }
 function restart(ball, block) {
     ball.x = Math.floor(Math.random()*480);
     ball.y = 100;
     ball.yVelocity = 1;
+	block.x = 200;
 }
 class Ball {
     constructor(x, y) {
